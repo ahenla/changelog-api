@@ -6,7 +6,9 @@ const router = Router();
 Product
 */
 
-router.get("/product", () => {});
+router.get("/product", (req, res) => {
+  res.json({ message: "OMG" });
+});
 router.get("/product/:id", () => {});
 router.put("/product/:id", () => {});
 router.post("product", () => {});
@@ -26,7 +28,7 @@ router.delete("update/:id", () => {});
 update point
 */
 
-router.get("/updatepoint", () => {});
+router.get("/updatepoint", (req, res) => {});
 router.get("/updatepoint/:id", () => {});
 router.put("/updatepoint/:id", () => {});
 router.post("updatepoint", () => {});
