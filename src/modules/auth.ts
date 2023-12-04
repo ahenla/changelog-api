@@ -11,6 +11,8 @@ export const hashPassword = (password) => {
   return bcrypt.hash(password, 5); // the second argument is the salt
 };
 
+// tokenizer
+
 export const createJWT = (user) => {
   const token = jwt.sign(
     {
