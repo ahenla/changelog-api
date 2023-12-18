@@ -28,13 +28,13 @@ router.put(
   "/product/:id",
   body("name").isString(),
   handleInputErrors,
-  UpdateProduct
+  UpdateProduct,
 );
 router.post(
   "/product",
   body("name").isString(),
   handleInputErrors,
-  createProduct
+  createProduct,
 );
 router.delete("/product/:id", deleteProduct);
 
@@ -50,14 +50,14 @@ router.put(
   body("body").optional(),
   body("status").isIn(["IN_PROGRESS", "SHIPPED", "DEPRECATED"]).optional(),
   body("version").optional(),
-  updateUpdate
+  updateUpdate,
 );
 router.post(
   "/update",
   body("title").exists().isString(),
   body("body").exists().isString(),
   body("productId").exists().isString(),
-  createUpdate
+  createUpdate,
 );
 router.delete("/update/:id", deleteUpdate);
 
@@ -71,14 +71,14 @@ router.put(
   "/updatepoint/:id",
   body("name").optional().isString(),
   body("description").optional().isString(),
-  () => {}
+  () => {},
 );
 router.post(
   "/updatepoint",
   body("name").isString(),
   body("description").isString(),
   body("updateId").exists().isString(),
-  () => {}
+  () => {},
 );
 router.delete("/updatepoint/:id", () => {});
 
